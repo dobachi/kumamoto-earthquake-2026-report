@@ -87,3 +87,34 @@ table {
     background: none;
   }
 }
+
+/* ── 相互参照 ──
+ * §x.y は節へ、[S-xx] は出典表の該当行へ飛ぶ。
+ * 本文の読みを邪魔しないよう、下線は hover のときだけ出す。
+ */
+a.secref, a.srcref {
+  color: var(--ev-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+a.secref:hover, a.srcref:hover {
+  text-decoration: underline;
+}
+a.srcref {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* 出典表の行へ飛んだとき、どこに着地したか分かるようにする */
+td.src-anchor {
+  scroll-margin-top: 4rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+td.src-anchor:target,
+tr:has(td.src-anchor:target) {
+  background: #fff6d9;
+}
+@media (prefers-color-scheme: dark) {
+  tr:has(td.src-anchor:target) { background: #3a3016; }
+}

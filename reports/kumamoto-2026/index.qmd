@@ -23,6 +23,8 @@ format:
     toc-depth: 3
 filters:
   - evidence.lua
+  - secref.lua
+  - srcref.lua
 ---
 
 - 作成日: 2026-08-01（**全出典の照合を実施済み**）
