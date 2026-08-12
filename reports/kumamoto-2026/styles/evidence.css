@@ -1,0 +1,89 @@
+/* evidence.css — 事実 / 未照合 / 推論 の三区分を見た目で分ける。
+ *
+ * 自作レンダラ（render_report.py）の配色思想を引き継いでいる:
+ *   事実   実線の左罫。出典が言っていること
+ *   未照合 警告色。出典ページを取得できず、実在を確認していない引用
+ *   推論   点線で囲う。筆者の読みであって、出典の主張ではない
+ *
+ * この区別は装飾ではない。落とすと、読者が出典の言と筆者の読みを取り違える。
+ */
+
+:root {
+  --ev-accent: #4a6fa5;
+  --ev-warn: #b26a00;
+  --ev-infer: #6b7280;
+  --ev-infer-soft: #f6f7f9;
+  --ev-rule: #d7dce3;
+}
+
+/* ── 区分のラベル ── */
+.etag {
+  display: inline-block;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--ev-accent);
+  margin-bottom: 6px;
+}
+
+/* ── 事実: 出典の逐語引用 ── */
+.evidence {
+  margin: 0 0 18px;
+  padding: 10px 0 10px 16px;
+  border-left: 3px solid var(--ev-accent);
+}
+.evidence p {
+  margin: 0.25em 0;
+}
+
+/* ── 未照合: 取得できず実在を確認していない ── */
+.evidence.unverified {
+  border-left-color: var(--ev-warn);
+  background: #fffaf2;
+}
+.evidence.unverified .etag {
+  color: var(--ev-warn);
+}
+.evidence.unverified .etag::after {
+  content: "（出典ページを取得できず、実在を未確認）";
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* ── 推論: 筆者の読み ── */
+.inference {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border: 1px dashed var(--ev-infer);
+  border-radius: 5px;
+  background: var(--ev-infer-soft);
+}
+.inference .etag {
+  color: var(--ev-infer);
+}
+.inference p {
+  margin: 0.25em 0;
+}
+
+/* ── 出典表 ── */
+table {
+  font-size: 0.92em;
+}
+
+/* ── ダークテーマ ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ev-infer-soft: #1b1e24;
+    --ev-rule: #333a44;
+  }
+  .evidence.unverified {
+    background: #2a2114;
+  }
+}
+
+/* ── 印刷・PDF ── */
+@media print {
+  .inference {
+    background: none;
+  }
+}

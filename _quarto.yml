@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "index.qmd"
+    - "reports/**/*.qmd"
+
+website:
+  title: "令和8年（2026年）熊本地震 調査報告"
+  description: "出典の原文を併記し、機械照合した調査記録"
+  site-url: "https://dobachi.github.io/kumamoto-earthquake-2026-report/"
+  navbar:
+    left:
+      - text: "報告書"
+        href: reports/kumamoto-2026/index.qmd
+      - text: "この記録について"
+        href: index.qmd
+  page-footer:
+    left: "本文は [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。引用部分は各出典者に帰属。"
+    right: "数値は速報値。確定値ではない。"
+
+format:
+  html:
+    theme: journal
+    toc: true
+    toc-depth: 3
+    toc-title: "目次"
+    number-sections: false
+    anchor-sections: true
+    lang: ja
+
+crossref:
+  fig-title: "図"
+  tbl-title: "表"
+  title-delim: ":"
