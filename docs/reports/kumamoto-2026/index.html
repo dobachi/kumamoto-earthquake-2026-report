@@ -553,11 +553,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p><strong>収束の速さは項目によって違う。</strong></p>
 <ul>
-<li><strong>死者は 8月9日で確定</strong>し、その後2日間動いていない</li>
-<li><strong>半壊も 8月9日で止まっている</strong>（1,045 のまま）</li>
+<li><strong>死者は 8月9日から8月11日まで 39 のまま動いていない</strong>（確定を意味しない。下記）</li>
+<li><strong>半壊も同じ2日間 1,045 のまま</strong></li>
 <li><strong>全壊と軽傷等は 8月11日時点でもまだ増えている。</strong> 全壊は 8/9→8/11 の2日で 62% 増、 軽傷等は 2.2倍になった</li>
 </ul>
-<p><strong>10日間で住家被害は約10倍になった。</strong> 被害そのものが拡大したのではなく、把握が進んだ結果である。</p>
+<div class="inference">
+<div class="etag">
+推論
+</div>
+<p><strong>【推】</strong> 2日間動かなかったことは確定を意味しない。第49報は 39人の内訳として <strong>「災害との関連を調査中の死者２人」</strong>を別掲しており、<strong>この2人は定義上まだ係争中</strong>である。災害関連死は月単位で増えうる（2016年熊本地震がその実例。ただし本報告書はその件数を確認していない）。</p>
+</div>
+<p><strong>10日間で住家被害（全壊+半壊+一部破損）は 1,440棟 → 10,781棟、約7.5倍になった。</strong> 被害そのものが拡大したのではなく、<strong>把握が進んだ結果である</strong>（【推】。出典は理由を書いていない）。</p>
 <div class="inference">
 <div class="etag">
 推論
@@ -695,7 +701,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>「工場では水や電力の供給システムと安全システムが正常に稼働しており、原材料の供給にも問題は生じていない。」— [S-11] 「隣接地で建設中の第2工場は、工事現場への影響がなかったため、安全を確認した上で29日に工事を再開した。」— [S-11]</p>
 </div>
 <p><strong>ソニーセミコンダクタ（菊陽町）</strong> — 8月4日から段階的に再開。 <strong>（2026-08-12 追記）</strong> ソニーセミコンダクタソリューションズの公式のお知らせ一覧では <strong>第2報（7月31日）が最新</strong>で、8月1日以降の続報は出ていない [S-59]。</p>
-<p><strong>ルネサス（川尻工場・熊本市）</strong> — <strong>8月4日に前倒しで生産再開</strong> [S-58]。</p>
+<div class="evidence">
+<div class="etag">
+出典
+</div>
+<p>「8月4日（火）より段階的に操業を再開する予定です。なお、8月中旬には地震発生前の稼働水準へ復旧する見込みです。」— [S-06]</p>
+</div>
+<p><strong>ルネサス（川尻・錦）</strong> — <strong>8月4日に前倒しで生産再開</strong>（第4報）[S-58]。</p>
 <div class="evidence">
 <div class="etag">
 出典
@@ -706,15 +718,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="etag">
 推論
 </div>
-<p><strong>【推】</strong> 復旧が前倒しになった点は、§3.4 の「軽微に収束する」側を支持する材料である。 ただし「約3週間をめどに震災前の生産能力へ復帰」とあり、<strong>8月12日時点ではまだ復帰途上</strong>である。</p>
+<p><strong>【推】</strong> 前倒しは §3.4 の「軽微に収束する」側を支持する材料である。ただし「約3週間をめどに震災前の生産能力へ復帰」とあり、<strong>8月12日時点ではまだ復帰途上</strong>である。</p>
 </div>
-<div class="evidence">
-<div class="etag">
-出典
-</div>
-<p>「8月4日（火）より段階的に操業を再開する予定です。なお、8月中旬には地震発生前の稼働水準へ復旧する見込みです。」— [S-06]</p>
-</div>
-<p><strong>ルネサス（川尻・錦）</strong> — 錦は震災前の生産能力に復帰済み、川尻は8月5日から順次再開予定。</p>
+<p>以下は<strong>第3報（更新前）の記述</strong>。錦は震災前の生産能力に復帰済み、川尻は8月5日から順次再開予定としていた。</p>
 <div class="evidence">
 <div class="etag">
 出典
@@ -1433,9 +1439,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>✅ 出典に実在を確認（FOUND）</td>
 <td><strong>105</strong></td>
 </tr>
+<tr class="odd">
+<td>❌ 不一致（NOT-FOUND）</td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td>⚠️ 取得不能（FETCH-FAIL）</td>
+<td>2（S-04、S-31 — いずれも403）</td>
+</tr>
 </tbody>
 </table>
-<p>※ S-59 は「第2報が最新である」という<strong>一覧ページの状態</strong>を根拠にしており、引用スパンは取っていない。 | ❌ 不一致（NOT-FOUND） | <strong>0</strong> | | ⚠️ 取得不能（FETCH-FAIL） | 2（S-04、S-31 — いずれも403） |</p>
+<p>※ S-59 は「第2報が最新である」という<strong>一覧ページの状態</strong>を根拠にしており、引用スパンは取っていない。</p>
 <p>2026-08-12 の追加17件（S-55 から4件、S-56 から9件、S-57 から2件、S-58 から2件）は、 取得した原文に対して文字列一致を確認済み。S-56・S-57 は PDF を <code>pdftotext -layout</code> で展開して照合した。</p>
 </section>
 <section id="機械が見ていない範囲2026-08-12-に緩めた" class="level3">
@@ -1483,8 +1497,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>(b)</td>
-<td><strong>数字が突合できない</strong></td>
-<td>§2.1 注「列挙された市町村の合計は34であり、『計36』と一致しない。（略）出典の表自体がこの不一致を説明していない」</td>
+<td><strong>数字が突合できなかった</strong>（<strong>解消済み</strong>）</td>
+<td>§2.1。前報では市町村別の合計34と総数36が合わず、<strong>出典の表自体が差を説明していなかった</strong>。第49報が別掲したことで解消した</td>
 </tr>
 <tr class="odd">
 <td>(c)</td>
@@ -1526,7 +1540,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="b-数字が突合できない-識別子が揃っていない" class="level3">
 <h3 class="anchored" data-anchor-id="b-数字が突合できない-識別子が揃っていない">11.4 (b) 数字が突合できない — 識別子が揃っていない</h3>
-<p>本報告書の §2.1 は、死者の市町村別内訳の合計（34）と総数（36）が一致せず、 <strong>出典の表自体がその不一致を説明していない</strong>と記録している。§9 でも未解決として残している。</p>
+<p>本報告書の §2.1 は、前報（8月1日）の時点で死者の市町村別内訳の合計（34）と総数（36）が一致せず、 <strong>出典の表自体がその差を説明していなかった</strong>ことを記録している。</p>
+<p><strong>この不一致は 2026-08-12 に解消した。</strong> 第49報が「災害関連死の可能性1人」「調査中2人」を 別掲したためである（§2.1）。</p>
+<div class="evidence">
+<div class="etag">
+出典
+</div>
+<p><strong>提言にとって不利な事実である。</strong> 解消したのは識別子の基盤が入ったからではなく、 <strong>出典側が表の書き方を変えただけ</strong>である。以下の議論は「識別子が揃っていれば もっと早く・確実に突合できた」という主張であって、<strong>この事例がそれを実証したわけではない。</strong></p>
+</div>
 <p>これは「集計が間違っている」という話ではない。<strong>同じ人を数えているかどうかを、 外から確かめる手段が無い</strong>という話である。</p>
 <p>ODS-RAM はこの問題に対応する概念を持つ。</p>
 <div class="evidence">
